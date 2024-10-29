@@ -26,7 +26,21 @@ document.querySelector('#login-button').addEventListener('click', function() { /
         const teamBoxes = document.querySelectorAll('.team-box'); // get every team-box
         for (let teamBox of teamBoxes) { // iterate on teamBoxes
           teamBox.addEventListener('click', function() { // add onclick to every team-box
+
             
+            // hacer la logica para quitar el resto de teamdivs y dejar solo el clickado en grande
+
+
+
+
+
+
+
+
+
+
+
+            // -------------------------------------------------------------------------------- 
           });
         }
       });
