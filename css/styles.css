@@ -1,0 +1,71 @@
+* {
+  
+}
+
+html {
+  display: grid;
+  place-content: center;
+  background-color: #c6ffcd;
+}
+
+body {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #c6ffcd;
+  text-align: center;
+  margin: 0 1em;
+}
+
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+#login-form input {
+  text-align: center;
+}
+
+#teams-box {
+  width: 100%;
+  text-align: center;
+}
+
+.team-box {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(2, 1fr);
+  text-align: center;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 12px;
+}
+
+.team-box h2 {
+  grid-column: span 2;
+}
+
+.monstie-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monstie-box img {
+  width: 40px;
+}
+
+/* clase para pantalla de equipoS */
+.on-teams-screen {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  gap: 1em;
+}
+
+/* clase para pantalla de equipo */
+.on-team-screen {
+
+}
