@@ -1,5 +1,4 @@
 function loadTeams(previousSibling) {
-  
 
   const loginData = JSON.parse(localStorage.getItem('loginData'));
   if (loginData) {
@@ -25,6 +24,11 @@ function loadTeams(previousSibling) {
   
     let teamDiv = document.createElement('div'); // create the div
     teamDiv.className = 'team-box'; // add the class "teamBox" to it
+    teamDiv.classList.add('blue-on-hover');
+    teamDiv.addEventListener('click', function () {
+      teamsDiv.classList = 'on-team-screen';
+      loadTeam(teamDiv);
+    });
   
     let teamName = document.createElement('h2'); // create team name
     teamName.textContent = 'Team '+(i+1); // add content (placeholder)

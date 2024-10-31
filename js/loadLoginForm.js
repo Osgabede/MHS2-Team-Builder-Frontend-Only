@@ -52,6 +52,9 @@ function loadLoginForm(previousSibling) {
       localStorage.setItem("loginData", JSON.stringify(formData));
       document.querySelector('h1').style.marginBottom = '0';
     }
+
+    this.parentNode.parentNode.remove(); // remove the loginForm
+    loadTeams(document.querySelector('h1')); // call loadTeams
   });
   
 }
