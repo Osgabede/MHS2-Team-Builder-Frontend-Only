@@ -54,7 +54,7 @@ function loadLoginForm(previousSibling) {
     }
 
     this.parentNode.parentNode.remove(); // remove the loginForm
-    loadTeams(document.querySelector('h1')); // call loadTeams
+    loadTeams(document.querySelector('h1')); // call loadTeams after the title
   });
   
 }
