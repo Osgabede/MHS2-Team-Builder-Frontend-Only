@@ -1,4 +1,9 @@
 function loadTeam(loadedTeam) {
+    window.appState.currentPage = 3;
+    attachEventListeners();
+
+    loadedTeam.removeEventListener('click', loadedTeam.handleTeamDivClick);
+
     // while to remove guideText
     while (loadedTeam.parentNode.previousElementSibling.tagName.toLowerCase() !== 'h2') { 
         loadedTeam.parentNode.previousElementSibling.remove();
@@ -6,9 +11,13 @@ function loadTeam(loadedTeam) {
 
     // 2 whiles to remove every other team beisdes the selected (previous and next ones)
     while(loadedTeam.nextElementSibling) {
+        loadedTeam.nextElementSibling.removeEventListener('click', loadedTeam.nextElementSibling.handleTeamDivClick);
+        delete loadedTeam.nextElementSibling.handleTeamDivClick;
         loadedTeam.nextElementSibling.remove();
     }
     while(loadedTeam.previousElementSibling) {
+        loadedTeam.previousElementSibling.removeEventListener('click', loadedTeam.previousElementSibling.handleTeamDivClick);
+        delete loadedTeam.previousElementSibling.handleTeamDivClick;
         loadedTeam.previousElementSibling.remove();
     }
 

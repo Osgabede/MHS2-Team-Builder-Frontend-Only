@@ -1,4 +1,11 @@
 function loadLoginForm(previousSibling) {
+  while (previousSibling.nextElementSibling.tagName.toLowerCase() !== 'script') {
+    previousSibling.nextElementSibling.remove();
+  }
+  window.appState.currentPage = 1;
+  window.appState.previousSibling = previousSibling;
+  attachEventListeners();
+
   let formDiv = document.createElement("div"); // create a div for the form
   formDiv.id = "login-form-div"; // give it an id
 
@@ -50,10 +57,8 @@ function loadLoginForm(previousSibling) {
 
       // Store the data in localStorage
       localStorage.setItem("loginData", JSON.stringify(formData));
-      document.querySelector('h1').style.marginBottom = '0';
     }
 
-    this.parentNode.parentNode.remove(); // remove the loginForm
     loadTeams(document.querySelector('h1')); // call loadTeams after the title
   });
   
