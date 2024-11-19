@@ -5,6 +5,8 @@ function loadTeams(previousSibling) {
   window.appState.currentPage = 2;
   window.appState.previousSibling = previousSibling;
   attachEventListeners();
+  document.querySelector('#forward-arrow-button').classList.remove('enabled');
+  document.querySelector('#forward-arrow-button').classList.remove('disabled');
 
   let guideText = document.createElement('p'); // create the p
   guideText.textContent = "Click on any team to edit it"; // add its text

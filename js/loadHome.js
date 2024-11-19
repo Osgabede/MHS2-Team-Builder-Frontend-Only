@@ -2,7 +2,7 @@ window.addEventListener('load', () => {
   localStorage.clear(); // placeholder functionality due to no DB
 });
 
-function loadHome(previousSibling) {
+function loadHome(previousSibling) { 
   window.appState.currentPage = 0;
   while (previousSibling.nextElementSibling.tagName.toLowerCase() !== 'script') {
     previousSibling.nextElementSibling.remove();

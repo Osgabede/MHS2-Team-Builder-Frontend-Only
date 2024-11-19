@@ -5,6 +5,10 @@ function loadLoginForm(previousSibling) {
   window.appState.currentPage = 1;
   window.appState.previousSibling = previousSibling;
   attachEventListeners();
+  document.querySelector('#back-arrow-button').classList.remove('disabled'); 
+  document.querySelector('#back-arrow-button').classList.add('enabled');
+  document.querySelector('#forward-arrow-button').classList.remove('enabled');
+  document.querySelector('#forward-arrow-button').classList.remove('disabled');
 
   let formDiv = document.createElement("div"); // create a div for the form
   formDiv.id = "login-form-div"; // give it an id
